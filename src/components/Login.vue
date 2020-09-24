@@ -7,36 +7,21 @@
       </div>
 
       <!-- login form -->
-      <el-form
-        ref="loginFormRef"
-        class="login_form"
-        abel-width="0px"
-        :model="loginFormData"
-        :rules="loginFormRules"
-      >
+      <el-form ref="loginFormRef" class="login_form" abel-width="0px" :model="loginFormData" :rules="loginFormRules">
         <!-- login form - user -->
         <el-form-item prop="username">
-          <el-input
-            class="login_icon"
-            prefix-icon="icon-user"
-            placeholder="please input username"
-            v-model="loginFormData.username"
-          ></el-input>
+          <el-input class="login_icon" prefix-icon="icon-user" placeholder="please input username" v-model="loginFormData.username"></el-input>
         </el-form-item>
+
         <!-- login form - passwd -->
         <el-form-item prop="password">
-          <el-input
-            class="login_icon"
-            prefix-icon="icon-lock"
-            placeholder="please input password"
-            v-model="loginFormData.password"
-            show-password
-          ></el-input>
+          <el-input class="login_icon" prefix-icon="icon-lock" placeholder="please input password" v-model="loginFormData.password" show-password></el-input>
         </el-form-item>
+
         <!-- login form - button -->
         <el-form-item class="login_btns">
-          <el-button type="primary" @click="login">login</el-button>
-          <el-button type="info" @click="resetLoginForm">reset</el-button>
+          <el-button type="primary" @click="login">登陆</el-button>
+          <el-button type="info" @click="resetLoginForm">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -89,10 +74,7 @@ export default {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return
 
-        const { data: result } = await this.$http.post(
-          'login',
-          this.loginFormData
-        )
+        const { data: result } = await this.$http.post('login', this.loginFormData)
 
         if (!result) {
           return console.log('result is null')
