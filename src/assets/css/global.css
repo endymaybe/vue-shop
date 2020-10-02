@@ -6,6 +6,7 @@ body,
     height: 100%;
     padding: 0;
     margin: 0;
+    min-width: 1000px;
 }
 
 body {
@@ -13,6 +14,9 @@ body {
         "WenQuanYi Micro Hei", sans-serif !important;
 }
 
+/*
+ * element-ui样式
+ */
 .el-breadcrumb {
     margin-bottom: 15px;
     font-size: 12px;
@@ -29,4 +33,13 @@ body {
 
 .el-pagination {
     margin-top: 15px;
+}
+
+/*
+ * 通用样式
+ */
+.v-center {
+    /* 垂直居中对齐 */
+    display: flex;
+    align-items: center;
 }
