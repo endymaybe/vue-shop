@@ -88,7 +88,6 @@ export default {
       const { data: result } = await this.$http.get('menus')
       if (result.meta.status === 200) {
         this.menulist = result.data
-        console.log(result.data)
       } else {
         return this.$message.error(result.meta.mag)
       }

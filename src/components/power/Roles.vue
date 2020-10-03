@@ -324,7 +324,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .el-tag {
   margin: 8px;
 }
