@@ -39,6 +39,10 @@ body {
   height: 240px;
 }
 
+.el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+
 /*
  * 通用样式
  */
