@@ -43,6 +43,27 @@ body {
   overflow-x: hidden;
 }
 
+.el-steps {
+  margin-top: 15px;
+}
+
+.el-step__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.el-step__title {
+  font-size: 12px;
+}
+
+.quill-editor {
+  margin: 15px 0;
+}
+
+.ql-editor {
+  min-height: 300px;
+}
+
 /*
  * 通用样式
  */
