@@ -1,8 +1,10 @@
 <template>
-  <ul class="el-timeline"
+  <ul
+    class="el-timeline"
     :class="{
       'is-reverse': reverse
-    }">
+    }"
+  >
     <slot></slot>
   </ul>
 </template>

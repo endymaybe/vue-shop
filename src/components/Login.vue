@@ -10,12 +10,23 @@
       <el-form ref="loginFormRef" class="login_form" abel-width="0px" :model="loginFormData" :rules="loginFormRules">
         <!-- login form - user -->
         <el-form-item prop="username">
-          <el-input class="login_icon" prefix-icon="icon-user" placeholder="please input username" v-model="loginFormData.username"></el-input>
+          <el-input
+            class="login_icon"
+            prefix-icon="icon-user"
+            placeholder="please input username"
+            v-model="loginFormData.username"
+          ></el-input>
         </el-form-item>
 
         <!-- login form - passwd -->
         <el-form-item prop="password">
-          <el-input class="login_icon" prefix-icon="icon-lock" placeholder="please input password" v-model="loginFormData.password" show-password></el-input>
+          <el-input
+            class="login_icon"
+            prefix-icon="icon-lock"
+            placeholder="please input password"
+            v-model="loginFormData.password"
+            show-password
+          ></el-input>
         </el-form-item>
 
         <!-- login form - button -->
