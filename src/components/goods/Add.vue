@@ -296,10 +296,8 @@ export default {
 
         // 处理商品分类
         form.goods_cat = form.goods_cat.join(',')
-        console.log('form', form)
 
         const { data: result } = await this.$http.post('goods', form)
-        console.log(result)
         if (result.meta.status !== 201) {
           return this.$message.error('添加商品失败')
         }
