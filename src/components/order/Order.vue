@@ -172,6 +172,7 @@ export default {
      */
     handlePageChange(newPage) {
       this.queryInfo.pagenum = newPage
+      console.log(newPage)
       this.getOrderList()
     },
 

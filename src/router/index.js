@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login.vue'
-import Home from '../components/Home.vue'
-import Welcomme from '../components/Welcome.vue'
-import Users from '../components/user/Users.vue'
-import Rights from '../components/power/Rights.vue'
-import Roles from '../components/power/Roles.vue'
-import Cate from '../components/goods/Cate.vue'
-import Params from '../components/goods/Params.vue'
-import List from '../components/goods/List.vue'
-import AddPage from '../components/goods/Add.vue'
-import Order from '../components/order/Order.vue'
-import Report from '../components/report/Report.vue'
+
+const Login = () => import(/* webpackChunkName: "group-login" */ '../components/Login.vue')
+const Home = () => import(/* webpackChunkName: "group-login" */ '../components/Home.vue')
+const Welcome = () => import(/* webpackChunkName: "group-login" */ '../components/Welcome.vue')
+
+const Users = () => import(/* webpackChunkName: "group-user" */ '../components/user/Users.vue')
+const Rights = () => import(/* webpackChunkName: "group-user" */ '../components/power/Rights.vue')
+const Roles = () => import(/* webpackChunkName: "group-user" */ '../components/power/Roles.vue')
+
+const Cate = () => import(/* webpackChunkName: "group-good" */ '../components/goods/Cate.vue')
+const Params = () => import(/* webpackChunkName: "group-good" */ '../components/goods/Params.vue')
+const List = () => import(/* webpackChunkName: "group-good" */ '../components/goods/List.vue')
+const AddPage = () => import(/* webpackChunkName: "group-good" */ '../components/goods/Add.vue')
+
+const Order = () => import(/* webpackChunkName: "group-other" */ '../components/order/Order.vue')
+const Report = () => import(/* webpackChunkName: "group-other" */ '../components/report/Report.vue')
 
 Vue.use(VueRouter)
 
@@ -24,7 +28,7 @@ const router = new VueRouter({
       component: Home,
       redirect: '/welcome',
       children: [
-        { path: '/welcome', component: Welcomme },
+        { path: '/welcome', component: Welcome },
         { path: '/users', component: Users },
         { path: '/rights', component: Rights },
         { path: '/roles', component: Roles },

@@ -15,9 +15,6 @@
         <el-table-column type="expand">
           <!-- 作用域插槽 -->
           <template slot-scope="scope">
-            <!-- <el-table :data="scope.row.children" stripe>
-              <el-table-column type="index" label="#"> </el-table-column>
-            </el-table> -->
             <el-row
               :class="[i1 === 0 ? 'bd-top' : '', 'bd-bottom', 'v-center']"
               v-for="(item1, i1) in scope.row.children"

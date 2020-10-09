@@ -5,21 +5,17 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 
-import './plugins/element.js'
+// 导入字体样式
 import './assets/fonts/icomoon/style.css'
+// 导入全局样式
 import './assets/css/global.css'
 
 // 导入树形表格
 import TreeTable from 'vue-table-with-tree-grid'
 // 导入富文本编辑器组件和样式
 import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css' // import styles
-import 'quill/dist/quill.snow.css' // for snow theme
-import 'quill/dist/quill.bubble.css' // for bubble theme
-
 // 导入页面打开加载进度条
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
 
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 axios.interceptors.request.use(config => {

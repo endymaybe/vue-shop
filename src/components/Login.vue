@@ -87,9 +87,7 @@ export default {
 
         const { data: result } = await this.$http.post('login', this.loginFormData)
 
-        if (!result) {
-          return console.log('result is null')
-        } else if (result.meta.status !== 200) {
+        if (result.meta.status !== 200) {
           return this.$message.error('login failed')
         } else {
           this.$message.success('login success')
